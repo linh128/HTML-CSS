@@ -19,12 +19,14 @@ html {
     top: 0;
 }
 
+.nav {
+    display: inline-block;
+}
+
 .nav,
 .subnav {
     list-style-type: none;
 }
-
-.nav ul {}
 
 .nav>li {
     display: inline-block;
@@ -32,11 +34,10 @@ html {
 
 .nav li {
     position: relative;
-
 }
 
 .nav>li>a {
-    line-height: 46px;  
+    line-height: 46px;
     color: white;
     text-transform: uppercase;
     padding: 0 24px;
@@ -49,11 +50,10 @@ html {
 }
 
 .nav li a {
-      
+
     /* top_bot + left_righ */
     text-decoration: none;
     display: block;
-    font-size: 15px;
 }
 
 .nav>li:hover>a,
@@ -83,4 +83,29 @@ html {
 .slider {
     background-color: #333;
     min-height: 500px;
+}
+
+.nav .ti-angle-down {
+    font-size: 12px;
+}
+
+.header>.search-btn {
+    float: right;
+    padding: 0 22px;
+}
+
+.header>.search-btn:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.header>.search-btn:hover>i {
+    color: black;
+}
+
+
+.header .search-icon {
+    color: white;
+    font-size: 20px;
+    line-height: 46px;
 }
