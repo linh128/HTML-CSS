@@ -9,14 +9,15 @@ html {
 }
 
 #main {
-    height: 2000px;
 }
 
 .header {
+    position: fixed;
     background-color: black;
     height: 46px;
-    position: sticky;
     top: 0;
+    left: 0;
+    right: 0;
 }
 
 .nav {
@@ -50,8 +51,6 @@ html {
 }
 
 .nav li a {
-
-    /* top_bot + left_righ */
     text-decoration: none;
     display: block;
 }
@@ -80,10 +79,6 @@ html {
     color: black;
 }
 
-.slider {
-    background-color: #333;
-    min-height: 500px;
-}
 
 .nav .ti-angle-down {
     font-size: 12px;
@@ -109,3 +104,23 @@ html {
     font-size: 20px;
     line-height: 46px;
 }
+
+#slider {
+    margin-top: 46px;
+    padding-top: 50%; /* Height = 50% of Width, will using bgimage */
+    background: url('../img/slider5.jpg') top center / cover no-repeat;
+}
+
+/* #main .content {
+    background-color: darkcyan;
+    min-height: 100%;
+} */
+
+/* #main .footer {
+    background-color: chocolate;
+    min-height: 100px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+} */
