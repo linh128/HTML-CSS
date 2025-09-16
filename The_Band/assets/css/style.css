@@ -106,9 +106,21 @@ html {
 }
 
 #slider {
-    margin-top: 46px;
+    position: relative;
+    top: 46px;
     padding-top: 50%; /* Height = 50% of Width, will using bgimage */
-    background: url('../img/slider5.jpg') top center / cover no-repeat;
+    background: url('../img/slider5-repair.jpg') top center / cover no-repeat;
+}
+
+#slider .slider-text-content {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 48px;
+    color: #ccc;
+    /* left: 50%;    
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
 }
 
 /* #main .content {
