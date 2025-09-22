@@ -8,8 +8,7 @@ html {
     font-family: sans-serif;
 }
 
-#main {
-}
+#main {}
 
 .header {
     position: fixed;
@@ -18,7 +17,8 @@ html {
     top: 0;
     left: 0;
     right: 0;
-     z-index: 1; /* to front (layer) */
+    z-index: 1;
+    /* to front (layer) */
 }
 
 .nav {
@@ -112,8 +112,10 @@ html {
 #slider {
     position: relative;
     top: 46px;
-    padding-top: 50%; /* Height = 50% of Width, will using bgimage */
+    padding-top: 50%;
+    /* Height = 50% of Width, will using bgimage */
     background: url('../img/slider5-repair.jpg') top center / cover no-repeat;
+    margin-bottom: 46px;
 }
 
 #slider .slider-text-content {
@@ -125,12 +127,92 @@ html {
 }
 
 #slider .slider-text-heading {
-    font-weight: 600;    
+    font-weight: 600;
     font-size: 24px;
 }
+
 #slider .slider-text-description {
     font-size: 15px;
     margin-top: 20px;
+}
+
+.content {
+    margin-top: 46px;
+}
+
+.content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+.content .section-heading,
+.content .section-sub-heading {
+    text-align: center;
+}
+
+
+.content .section-heading {
+    font-size: 30px;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+
+.content .section-sub-heading {
+    font-family: sans-serif;
+    opacity: 0.60;
+    font-size: 15px;
+    margin: 15px 0;
+    font-style: italic;
+}
+
+.content .about-text {
+    font-size: 15px;
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.content .member-list {
+    padding: 32px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.content .member-item {
+    width: 200px;
+    text-align: center;
+}
+
+
+.content .member-name {
+    margin: 15px 0;
+}
+
+.content .member-item img {
+    width: 100%;
+    height: 250px;
+    /* chiều cao mong muốn */
+    object-fit: cover;
+    /* giữ tỷ lệ, cắt phần thừa */
+    border-radius: 4px;
+    /* bo góc nhẹ cho đẹp */
+    display: block;
+    margin: 0 auto;
+}
+
+.content .section-tour {
+    background-color: black !important;
+    width: 100%;
+}
+
+.content .section-tour p {
+    color: #ccc;
 }
 
 /* #main .content {
