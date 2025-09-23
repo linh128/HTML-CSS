@@ -21,10 +21,71 @@ html {
     /* to front (layer) */
 }
 
+/* COMMOn */
+.btn {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    text-decoration: none;
+    border: #000 1px solid;
+}
+
+.btn:hover {
+    background-color: #ccc;
+    color: #000;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border: #ccc 1px solid;
+}
+
 .text-white {
     color: #fff !important;
 }
 
+.mt-8 {
+    margin-top: 8px;
+}
+
+.mt-16 {
+    margin-top: 16px;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.row::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.col {
+    float: left;
+    padding: 0 8px;
+}
+
+.col-full {
+    width: 100%;
+}
+
+.col-2 {
+    width: calc(100% / 2);
+}
+
+.col-3 {
+    width: calc(100% / 3);
+}
+
+.col-4 {
+    width: calc(100% / 4);
+}
+
+
+/* Sss */
 .nav {
     display: inline-block;
 }
@@ -117,9 +178,28 @@ html {
     position: relative;
     top: 46px;
     padding-top: 50%;
-    /* Height = 50% of Width, will using bgimage */
-    background: url('../img/slider5-repair.jpg') top center / cover no-repeat;
+    /* Height = 50% of Width, will using bgimage */    
     margin-bottom: 46px;
+}
+
+.slider-img-1 {
+    background: url('../img/slider1.jpg') top center / cover no-repeat;
+}
+
+.slider-img-2 {
+    background: url('../img/slider2.jpg') top center / cover no-repeat;
+}
+
+.slider-img-3 {
+    background: url('../img/slider3.jpg') top center / cover no-repeat;
+}
+
+.slider-img-4 {
+    background: url('../img/slider4.jpg') top center / cover no-repeat;
+}
+
+.slider-img-5 {
+    background: url('../img/slider5.jpg') top center / cover no-repeat;
 }
 
 #slider .slider-text-content {
@@ -149,6 +229,7 @@ html {
     margin-left: auto;
     margin-right: auto;
     padding: 64px 0;
+    /* background-color: #009688; */
 }
 
 .content .section-heading,
@@ -253,16 +334,8 @@ html {
 }
 
 .section-tour .place-list {
-    margin-top: 32px;
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-top: 32px;    
     padding-bottom: 40px;
-}
-
-.section-tour .place-item {
-    float: left;
-    width: calc(100% / 3);
-    padding: 0 8px;
 }
 
 .section-tour .place-img {
@@ -297,14 +370,7 @@ html {
     line-height: 1.4;
 }
 
-.section-tour .place-buy-btn {
-    display: inline-block;
-    background-color: #000;
-    color: #fff;
-    padding: 8px 16px;
-    margin-bottom: 16px;
-    text-decoration: none;
-}
+
 
 .modal {
     position: fixed;
@@ -422,16 +488,70 @@ html {
     }
 }
 
-/* #main .content {
-    background-color: darkcyan;
-    min-height: 100%;
-} */
+/* CONTACT */
+.contact-content {
+    margin-top: 48px;
+}
 
-/* #main .footer {
-    background-color: chocolate;
-    min-height: 100px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-} */
+.contact-info {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+.contact-info i[class*="ti-"] {
+    display: inline-block;
+}
+
+.contact-form {
+    font-size: 15px;
+    position: relative;
+}
+
+.contact-form-control {
+    padding: 8px;
+    border: solid #ccc 1px;
+    width: 100%;
+}
+
+.contact-input {
+    padding: 0 8px;
+    
+}
+
+.btn-contact-submit {
+    float: right;
+}
+
+
+/* footer */
+
+.map {
+    background: url("/The_Band/assets/img/map/map.jpg") center / cover no-repeat;
+    padding-top: 50%;
+}
+
+.footer {
+    display: flexbox;
+    justify-items: center;
+    align-items: center;
+    padding: 64px 16px;
+}
+
+.footer-icons i, .footer-icons a {
+    font-size: 22px;
+    margin: 0 2px;
+    color: #757575;
+    text-decoration: none;
+}
+
+.footer-text {
+    font-size: 15px;
+    margin-top: 15px;
+    opacity: 0.6;
+    text-decoration: none;
+    color: #000;
+}
+
+.footer-text a {
+    color: #000;
+}

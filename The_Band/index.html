@@ -33,7 +33,7 @@
             <div class="search-btn"><i class="search-icon ti-search"></i></div>
         </div>
 
-        <div id="slider">
+        <div id="slider" class="slider-img-2">
             <div class="slider-text-content">
                 <h2 class="slider-text-heading">Sài Gòn</h2>
                 <div class="slider-text-description">Trên Những Đám Mây - Chillies Concert Tour</div>
@@ -87,34 +87,34 @@
                         <li class="ticket-item">September <span class="status">Sold out</span></li>
                         <li class="ticket-item">October <span class="quantity">3</span></li>
                     </ul>
-                    <div class="place-list">
-                        <div class="place-item">
+                    <div class="row place-list">
+                        <div class="col col-3">
                             <img src="/The_Band/assets/img/place/place1.jpg" alt="new-york" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-sub-heading">Fri 27 Nov 2016</p>
                                 <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" onclick="" class="place-buy-btn js-buy-ticket">Buy Ticket</button>
+                                <button href="#" onclick="" class="btn js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-3">
                             <img src="/The_Band/assets/img/place/place2.jpg" alt="new-york" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-sub-heading">Fri 27 Nov 2016</p>
                                 <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" onclick="" class="place-buy-btn js-buy-ticket">Buy Ticket</button>
+                                <button href="#" onclick="" class="btn js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
 
-                        <div class="place-item">
+                        <div class="col col-3">
                             <img src="/The_Band/assets/img/place/place3.jpg" alt="new-york" class="place-img">
                             <div class="place-content">
                                 <h3 class="place-heading">San francisco</h3>
                                 <p class="place-sub-heading">Fri 27 Nov 2016</p>
                                 <p class="place-text">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <button href="#" onclick="" class="place-buy-btn js-buy-ticket">Buy Ticket</button>
+                                <button href="#" onclick="" class="btn js-buy-ticket">Buy Ticket</button>
                             </div>
                         </div>
                         <div class="clear"></div>
@@ -125,12 +125,49 @@
             <div class="content-section">
                 <p class="section-heading">Contact</p>
                 <p class="section-sub-heading">Fan? Drop a note!</p>
+                <div class="contact-content">
+                    <div class="row">
+                        <div class="col col-2 contact-info">
+                            <p><i class="ti-location-pin"> Chicago, US</i></p>
+                            <p><i class="ti-mobile"> Phone: +00 151515</i></p>
+                            <p><i class="ti-email"> Email: mail@mail.com</i></p>
+                        </div>
+                        <div class="col col-2 contact-form">
+                            <div class="row">
+                                <div class="col col-2 contact-input">
+                                    <input id="contact-name" required="true" class="contact-form-control"
+                                        placeholder="Name" type="text">
+                                </div>
+                                <div class="col col-2">
+                                    <input id="contact-email" required="true" class="contact-form-control"
+                                        placeholder="Email" type="email">
+                                </div>
+                            </div>
+                            <div class="row mt-8">
+                                <div class="col col-full">
+                                    <input id="contact-message" required="true" class="contact-form-control"
+                                        placeholder="Message" type="text">
+                                </div>
+                            </div>
+                            <input type="submit" class="mt-16 btn btn-contact-submit" value="SEND">
+                        </div>
 
+                    </div>
+                </div>
             </div>
-        </div>
 
+        </div>
+        <div class="map"></div>
         <div class="footer">
-            FOOTER
+            <div class="row footer-icons">
+                <a href=""><i class="ti-facebook"></i></a>
+                <a href=""> <i class="ti-instagram"></i></a>
+                <a href=""> <i class="ti-pinterest"></i></a>
+                <a href=""> <i class="ti-twitter"></i></a>
+                <a href=""> <i class="ti-youtube"></i></a>
+            </div>
+            <p class="footer-text">Powered by <a href="w3.css">w3.css</a></p>
+
         </div>
     </div>
 
@@ -172,7 +209,7 @@
         const buyTicketsBtns = document.querySelectorAll('.js-buy-ticket')
         const modal = document.querySelector('.js-modal')
         const modalContainer = document.querySelector('.js-modal-container')
-        
+
         function showBuyTicket(params) {
             modal.classList.add('open')
         }
@@ -193,6 +230,33 @@
         modalContainer.addEventListener('click', function (event) {
             event.stopPropagation()
         })
+    </script>
+
+    <script>
+        // //Auto change Slider
+        let sliderClass = document.querySelector('#slider')
+        let a = 0
+        let b = 0
+        setInterval(() => {  
+            a++                 
+            if (a == 1) {
+                b = 5
+            } else if (a > 5) {
+                a = 1 // reset lại
+                b = 5
+                sliderClass.classList.remove("slider-img-6")
+                sliderClass.classList.add("slider-img-1")
+            } else {
+                b = a - 1
+            }
+            let addClass = "slider-img-" + a.toString()
+            let removeClass = "slider-img-" + b.toString()
+            sliderClass.classList.remove(removeClass)
+            sliderClass.classList.add(addClass)
+            // console.log(addClass + "------------"+ removeClass)
+            
+        }, 3000); // 3000ms = 3s
+
     </script>
 </body>
 
