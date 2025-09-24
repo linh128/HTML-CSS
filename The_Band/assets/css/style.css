@@ -527,7 +527,7 @@ html {
 /* footer */
 
 .map {
-    background: url("/The_Band/assets/img/map/map.jpg") center / cover no-repeat;
+    background: url("../assets/img/map/map.jpg") center / cover no-repeat;
     padding-top: 50%;
 }
 
